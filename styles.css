@@ -77,15 +77,25 @@ header {
 
 .card-link { text-decoration: none; color: inherit; }
 
-.btn-save {
-    background: var(--primary);
-    color: white;
+.emergencyButton {
+    color: rgb(0, 0, 0);
     border: none;
     padding: 12px 25px;
     border-radius: 50px;
     cursor: pointer;
-    font-weight: bold; }
+    font-weight: bold;
+}
 
+
+
+.emergencyButton:hover{
+        opacity: 0.8;
+    }
+    
+.emergencyButton :active{
+        opacity: 0.6;
+
+    }
 .modal {
     display: none;
     position: fixed;
