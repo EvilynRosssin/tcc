@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saving Minds | Quiz de Humor</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+
+    <!-- MENU LATERAL -->
+    <aside class="sidebar">
+        <div class="logo-menu">
+            <h2>SAVING MINDS</h2>
+        </div>
+        <nav class="menu">
+            <a href="index.html">Início</a>
+            <a href="diario.html">Diário</a>
+            <a href="quiz.html" class="active">Quiz de Humor</a>
+            <a href="respiracao.html">Exercícios de Respiração</a>
+            <a href="ajuda.html">Ajuda Imediata</a>
+        </nav>
+    </aside>
+
+    <!-- ÁREA PRINCIPAL -->
+    <div class="site-wrapper">
+        <header>
+            <div class="logo">Saving Minds 💡</div>
+        </header>
+
+        <main>
+            <div class="quiz-container">
+                <!-- Barra de Progresso -->
+                <div class="progress-bar-container">
+                    <div id="progressBar" class="progress-bar"></div>
+                </div>
+
+                <!-- Pergunta 1 -->
+                <div class="step active" id="step-1">
+                    <span class="step-count">Pergunta 1 de 15</span>
+                    <h2>Como você descreveria seu nível de energia ao acordar hoje?</h2>
+                    <div class="options-grid">
+                        <button type="button" class="opt-btn" onclick="proximaPergunta('p1', 1)">⚡ Super disposto(a) e com gás total</button>
+                        <button type="button" class="opt-btn" onclick="proximaPergunta('p1', 2)">🌤️ Normal, levando a rotina com calma</button>
+                        <button type="button" class="opt-btn" onclick="proximaPergunta('p1', 3)">🔋 Arrastando os pés, precisando de descanso</button>
+                    </div>
+                </div>
+
+                <!-- Pergunta 2 -->
+                <div class="step" id="step-2">
+                    <span class="step-count">Pergunta 2 de 15</span>
+                    <h2>Como está a sua cabeça em relação às matérias e prazos da escola?</h2>
+                    <div class="options-grid">
+                        <button type="button" class="opt-btn" onclick="proximaPergunta('p2', 1)">🟢 Tudo organizado, sem desespero</button>
+                        <button type="button" class="opt-btn" onclick="proximaPergunta('p2', 2)">🟡 Algumas coisas acumuladas, mas sob controle</button>
+                        <button type="button" class="opt-btn" onclick="proximaPergunta('p2', 3)">🔴 Muita pressão e sensação de sobrecarga</button>
+                    </div>
+                </div>
+
+                <!-- Pergunta 3 -->
+                <div class="step" id="step-3">
+                    <span class="step-count">Pergunta 3 de 15</span>
+                    <h2>Qual frase mais combina com a sua capacidade de foco hoje?</h2>
+                    <div class="options-grid">
+                        <button type="button" class="opt-btn" onclick="proximaPergunta('p3', 1)">🎯 Foco total, consigo concentrar rápido</button>
+                        <button type="button" class="opt-btn" onclick="proximaPergunta('p3', 2)">💭 Mente meio avoadinha, mas dá pra estudar</button>
+                        <button type="button" class="opt-btn" onclick="proximaPergunta('p3', 3)">🤯 Impossível focar, pensamentos a mil</button>
+                    </div>
+                </div>
+
+                <!-- Pergunta 4 -->
+                <div class="step" id="step-4">
+                    <span class="step-count">Pergunta 4 de 15</span>
+                    <h2>Como está a sua paciência para interagir com as pessoas na escola?</h2>
+                    <div class="options-grid">
+                        <button type="button" class="opt-btn" onclick="proximaPergunta('p4', 1)">💬 Tranquila, com vontade de conversar e rir</button>
+                        <button type="button" class="opt-btn" onclick="proximaPergunta('p4', 2)">😐 Neutra, prefiro ficar mais na minha</button>
+                        <button type="button" class="opt-btn" onclick="proximaPergunta('p4', 3)">⚠️ Zero paciência, qualquer barulho me irrita</button>
+                    </div>
+                </div>
+
+                <!-- Pergunta 5 -->
+                <div class="step" id="step-5">
+                    <span class="step-count">Pergunta 5 de 15</span>
+                    <h2>Como foi a qualidade do seu sono na última noite?</h2>
+                    <div class="options-grid">
+                        <button type="button" class="opt-btn" onclick="proximaPergunta('p5', 1)">😴 Dormi super bem e acordei renovado(a)</button>
+                        <button type="button" class="opt-btn" onclick="proximaPergunta('p5', 2)">📱 Demorei um pouco pra dormir, mas ok</button>
+                        <button type="button" class="opt-btn" onclick="proximaPergunta('p5', 3)">📉 Dormi mal, acordei várias vezes ou tive insônia</button>
+                    </div>
+                </div>
+
+                <!-- Pergunta 6 -->
+                <div class="step" id="step-6">
+                    <span class="step-count">Pergunta 6 de 15</span>
+                    <h2>Quando você pensa nas tarefas de hoje, qual o sentimento principal?</h2>
+                    <div class="options-grid">
+                        <button type="button" class="opt-btn" onclick="proximaPergunta('p6', 1)">🚀 Motivação para resolver tudo</button>
+                        <button type="button" class="opt-btn" onclick="proximaPergunta('p6', 2)">🥱 Cansaço, mas vou fazendo no meu ritmo</button>
+                        <button type="button" class="opt-btn" onclick="proximaPergunta('p6', 3)">😰 Ansiedade e vontade de adiar tudo</button>
+                    </div>
+                </div>
+
+                <!-- Pergunta 7 -->
+                <div class="step" id="step-7">
+                    <span class="step-count">Pergunta 7 de 15</span>
+                    <h2>Como você reagiu quando algo não saiu como o planejado recentemente?</h2>
+                    <div class="options-grid">
+                        <button type="button" class="opt-btn" onclick="proximaPergunta('p7', 1)">💡 De boa, pensei logo em uma solução</button>
+                        <button type="button" class="opt-btn" onclick="proximaPergunta('p7', 2)">😮‍💨 Fiquei chateado(a), mas bola pra frente</button>
+                        <button type="button" class="opt-btn" onclick="proximaPergunta('p7', 3)">💥 Fiquei extremamente estressado(a) e desanimado(a)</button>
+                    </div>
+                </div>
+
+                <!-- Pergunta 8 -->
+                <div class="step" id="step-8">
+                    <span class="step-count">Pergunta 8 de 15</span>
+                    <h2>Você conseguiu reservar um tempo para si mesmo(a) nos últimos dias?</h2>
+                    <div class="options-grid">
+                        <button type="button" class="opt-btn" onclick="proximaPergunta('p8', 1)">🎨 Sim, fiz coisas que gosto e relaxei</button>
+                        <button type="button" class="opt-btn" onclick="proximaPergunta('p8', 2)">⏳ Pouco, a rotina está bem corrida</button>
+                        <button type="button" class="opt-btn" onclick="proximaPergunta('p8', 3)">❌ Zero tempo, só estudo, obrigações e cansaço</button>
+                    </div>
+                </div>
+
+                <!-- Pergunta 9 -->
+                <div class="step" id="step-9">
+                    <span class="step-count">Pergunta 9 de 15</span>
+                    <h2>Como está o seu nível de tensão corporal (ombros, pescoço, cabeça)?</h2>
+                    <div class="options-grid">
+                        <button type="button" class="opt-btn" onclick="proximaPergunta('p9', 1)">🧘 Relaxado(a), sem dores ou tensão</button>
+                        <button type="button" class="opt-btn" onclick="proximaPergunta('p9', 2)">🏋️ Um pouco pesado(a), mas suportável</button>
+                        <button type="button" class="opt-btn" onclick="proximaPergunta('p9', 3)">🧱 Músculos totalmente travados e doloridos</button>
+                    </div>
+                </div>
+
+                <!-- Pergunta 10 -->
+                <div class="step" id="step-10">
+                    <span class="step-count">Pergunta 10 de 15</span>
+                    <h2>Qual é a sua disposição para participar das aulas de hoje?</h2>
+                    <div class="options-grid">
+                        <button type="button" class="opt-btn" onclick="proximaPergunta('p10', 1)">🙋‍♂️ Curioso(a) e com vontade de aprender</button>
+                        <button type="button" class="opt-btn" onclick="proximaPergunta('p10', 2)">🚶‍♂️ Presente fisicamente, mas a cabeça longe</button>
+                        <button type="button" class="opt-btn" onclick="proximaPergunta('p10', 3)">😴 Só querendo que o sinal toque pra ir embora</button>
+                    </div>
+                </div>
+
+                <!-- Pergunta 11 -->
+                <div class="step" id="step-11">
+                    <span class="step-count">Pergunta 11 de 15</span>
+                    <h2>Como está sua alimentação e apetite na rotina de estudos?</h2>
+                    <div class="options-grid">
+                        <button type="button" class="opt-btn" onclick="proximaPergunta('p11', 1)">🥗 Regular e equilibrada, me alimento bem</button>
+                        <button type="button" class="opt-btn" onclick="proximaPergunta('p11', 2)">🍕 Meio desregulada (como demais por ansiedade ou pulo refeições)</button>
+                        <button type="button" class="opt-btn" onclick="proximaPergunta('p11', 3)">🚫 Sem apetite nenhum ou estômago embrulhado pelo estresse</button>
+                    </div>
+                </div>
+
+                <!-- Pergunta 12 -->
+                <div class="step" id="step-12">
+                    <span class="step-count">Pergunta 12 de 15</span>
+                    <h2>Como você se sente quando precisa fazer trabalhos em grupo?</h2>
+                    <div class="options-grid">
+                        <button type="button" class="opt-btn" onclick="proximaPergunta('p12', 1)">🤝 Animado(a), gosto de colaborar com os colegas</button>
+                        <button type="button" class="opt-btn" onclick="proximaPergunta('p12', 2)">📋 Razoável, prefiro quando cada um faz sua parte</button>
+                        <button type="button" class="opt-btn" onclick="proximaPergunta('p12', 3)">😩 Muito estressado(a), prefiro fazer tudo sozinho(a)</button>
+                    </div>
+                </div>
+
+                <!-- Pergunta 13 -->
+                <div class="step" id="step-13">
+                    <span class="step-count">Pergunta 13 de 15</span>
+                    <h2>Como você lida com o uso do celular e redes sociais nos momentos livres?</h2>
+                    <div class="options-grid">
+                        <button type="button" class="opt-btn" onclick="proximaPergunta('p13', 1)">📲 Uso de forma moderada pra me distrair</button>
+                        <button type="button" class="opt-btn" onclick="proximaPergunta('p13', 2)">👀 Passo mais tempo do que deveria rolando o feed</button>
+                        <button type="button" class="opt-btn" onclick="proximaPergunta('p13', 3)">🌀 Uso pra me alienar e esquecer os problemas escolares</button>
+                    </div>
+                </div>
+
+                <!-- Pergunta 14 -->
+                <div class="step" id="step-14">
+                    <span class="step-count">Pergunta 14 de 15</span>
+                    <h2>Você sente que tem alguém na escola (amigos/professores) para conversar?</h2>
+                    <div class="options-grid">
+                        <button type="button" class="opt-btn" onclick="proximaPergunta('p14', 1)">🫂 Sim, me sinto acolhido(a) e apoiado(a)</button>
+                        <button type="button" class="opt-btn" onclick="proximaPergunta('p14', 2)">🤷 Tenho colegas, mas converso só sobre o básico</button>
+                        <button type="button" class="opt-btn" onclick="proximaPergunta('p14', 3)">🪞 Me sinto sozinho(a) e deslocado(a) no ambiente escolar</button>
+                    </div>
+                </div>
+
+                <!-- Pergunta 15 -->
+                <div class="step" id="step-15">
+                    <span class="step-count">Pergunta 15 de 15</span>
+                    <h2>Se você pudesse escolher agora, do que mais precisa?</h2>
+                    <div class="options-grid">
+                        <button type="button" class="opt-btn" onclick="proximaPergunta('p15', 1)">🚀 Continuar produzindo e curtir o restante do dia</button>
+                        <button type="button" class="opt-btn" onclick="proximaPergunta('p15', 2)">🎧 Um tempinho sozinho(a) ouvindo música</button>
+                        <button type="button" class="opt-btn" onclick="proximaPergunta('p15', 3)">🛌 Desligar o celular e descansar sem cobranças</button>
+                    </div>
+                </div>
+
+                <!-- Resultado -->
+                <div class="step" id="step-resultado">
+                    <div class="result-card">
+                        <span id="resEmoji" class="res-emoji">🌟</span>
+                        <h2 id="resTitulo">Carregando resultado...</h2>
+                        <p id="resTexto">Aguarde um momento...</p>
+                        <div class="result-actions">
+                            <a href="respiracao.html" class="btn-action">🧘 Praticar Respiração</a>
+                            <button type="button" class="btn-action secondary" onclick="reiniciarQuiz()">🔄 Refazer Quiz</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="quiz.js"></script>
+</body>
+</html>
