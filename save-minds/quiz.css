@@ -1,0 +1,235 @@
+:root {
+    --bg: #f4f7f6;
+    --primary: #5d78ff;
+    --white: #ffffff;
+    --text: #2d3436;
+    --accent-red: #ff7675; 
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    margin: 0;
+    padding: 0;
+}
+
+/* ESTRUTURA COM MENU LATERAL */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: 100vh;
+    background: linear-gradient(180deg, #4b6cb7, #182848);
+    display: flex;
+    flex-direction: column;
+    color: white;
+    z-index: 1000;
+}
+
+.logo-menu {
+    text-align: center;
+    padding: 30px 20px;
+    border-bottom: 1px solid rgba(255,255,255,.15);
+}
+
+.logo-menu img {
+    width: 70px;
+    margin-bottom: 10px;
+}
+
+.logo-menu h2 {
+    font-size: 24px;
+    margin: 0;
+    color: white;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    padding: 16px 25px;
+    transition: .3s;
+    font-size: 17px;
+}
+
+.menu a:hover {
+    background: rgba(255,255,255,.15);
+    padding-left: 35px;
+}
+
+.menu .active {
+    background: #5d78ff;
+}
+
+/* ÁREA PRINCIPAL DA TELA */
+.site-wrapper {
+    margin-left: 220px;
+    width: calc(100% - 220px);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+header {
+    background: var(--white);
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,.08);
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+.logo { 
+    font-size: 1.5rem; 
+    font-weight: bold; 
+    color: rgb(95, 36, 150); 
+}
+
+/* CARD DO QUIZ PASSO A PASSO */
+.quiz-container {
+    max-width: 650px;
+    margin: 20px auto;
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    position: relative;
+}
+
+/* BARRA DE PROGRESSO */
+.progress-bar-container {
+    width: 100%;
+    height: 8px;
+    background: #eef2f5;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #5d78ff, #7f53ac);
+    transition: width 0.4s ease;
+}
+
+/* REGRAS QUE ESCONDEM AS OUTRAS PERGUNTAS */
+.step {
+    display: none; /* Esconde todas as perguntas por padrão */
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.step.active {
+    display: block !important; /* Exibe APENAS a pergunta que tiver a classe 'active' */
+    opacity: 1;
+}
+
+.step-count {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #5d78ff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.step h2 {
+    font-size: 1.4rem;
+    color: #2d3436;
+    margin: 15px 0 25px 0;
+    line-height: 1.4;
+}
+
+/* BOTÕES DAS OPÇÕES DE RESPOSTA */
+.options-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.opt-btn {
+    width: 100%;
+    padding: 18px 20px;
+    background: #f8fafc;
+    border: 2px solid #e2e8f0;
+    border-radius: 16px;
+    font-size: 1rem;
+    text-align: left;
+    color: #334155;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.opt-btn:hover {
+    background: #ffffff;
+    border-color: #5d78ff;
+    color: #5d78ff;
+    transform: translateX(4px);
+    box-shadow: 0 4px 12px rgba(93, 120, 255, 0.12);
+}
+
+/* TELA DO RESULTADO FINAL */
+.result-card {
+    text-align: center;
+    padding: 20px 10px;
+}
+
+.res-emoji {
+    font-size: 4rem;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.result-card h2 {
+    font-size: 1.8rem;
+    color: #2d3436;
+}
+
+.result-card p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #64748b;
+    margin-bottom: 30px;
+}
+
+.result-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-action {
+    padding: 14px 24px;
+    background: #5d78ff;
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-action.secondary {
+    background: #e2e8f0;
+    color: #475569;
+}
+
+.btn-action:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
